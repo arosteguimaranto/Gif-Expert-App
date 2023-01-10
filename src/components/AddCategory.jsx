@@ -1,8 +1,8 @@
 import { useState } from "react"
+import { GifExpertApp } from "../GifExpertApp";
 
 
-
-export const AddCategory = ({setCategories}) => {
+export const AddCategory = ({onNewCategory}) => {
 
     const [inputValue, setInputValue] = useState('One Punch');
 
@@ -16,7 +16,8 @@ export const AddCategory = ({setCategories}) => {
         if(inputValue.trim().length <= 1) return;
 
 
-        setCategories(categories => [inputValue, ...categories]);
+        onNewCategory(inputValue.trim() );
+        //setCategories(categories => [inputValue, ...categories]);
         setInputValue('');
     }
 
