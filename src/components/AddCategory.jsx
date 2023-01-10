@@ -1,10 +1,10 @@
 import { useState } from "react"
-import { GifExpertApp } from "../GifExpertApp";
+
 
 
 export const AddCategory = ({onNewCategory}) => {
 
-    const [inputValue, setInputValue] = useState('One Punch');
+    const [inputValue, setInputValue] = useState('');
 
     const onInputChange = ({ target }) => {
 
@@ -15,10 +15,9 @@ export const AddCategory = ({onNewCategory}) => {
         event.preventDefault();
         if(inputValue.trim().length <= 1) return;
 
-
-        onNewCategory(inputValue.trim() );
         //setCategories(categories => [inputValue, ...categories]);
         setInputValue('');
+        onNewCategory(inputValue.trim() );
     }
 
     return (
