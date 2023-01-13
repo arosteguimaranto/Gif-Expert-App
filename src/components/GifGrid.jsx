@@ -1,4 +1,8 @@
+//primero react
 import {useEffect, useState} from "react";
+// luego terceros
+import { GifItem } from "./GifItem";
+// por ultimo nuestro codigo
 import { getGifs } from "../helpers/getGifs";
 
 
@@ -21,14 +25,19 @@ export const GifGrid = ({ category }) => {
     <>
       <h3>{category}</h3>
 
-      <ol>
+      <div className="card-grid">
         {
-          images.map(({id, title}) => (
-            <li key={id}>{title}</li>
+          images.map((image) => (
+           <GifItem 
+           key={image.id}
+           //esparcir propiedades de un objeto
+           //utilizando el spreed operator
+           {...image }
+           />
           ))
         }
       
-      </ol>
+      </div>
 
       
     </>
