@@ -20,7 +20,7 @@ componente no este reprocesando esta funcion */
     }));
   
   
-    console.log(gifs);
+   
     return gifs;
     //console.log(data);
   }
