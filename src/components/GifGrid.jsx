@@ -1,4 +1,5 @@
 //primero react
+import {PropTypes} from 'prop-types'
 
 // luego terceros
 import { GifItem } from "./GifItem";
@@ -41,4 +42,8 @@ export const GifGrid = ({ category }) => {
       
     </>
   )
+}
+
+GifGrid.propTypes = {
+  category: PropTypes.string.isRequired
 }
