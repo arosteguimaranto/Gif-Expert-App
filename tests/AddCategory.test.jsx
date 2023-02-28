@@ -28,6 +28,8 @@ describe('Pruebas en <AddCategory />', () => {
             fireEvent.input(input, { target: {value: inputValue}});
             fireEvent.submit(form);
 
+            expect(input.value).toBe('');
+
     });
 
 

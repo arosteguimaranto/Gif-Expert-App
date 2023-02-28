@@ -12,6 +12,8 @@ export const AddCategory = ({ onNewCategory }) => {
     }
 
     const onSubmit = (event) => {
+     /*    console.log('Hola Mundo desde onSubmit') */
+
         event.preventDefault();
         if (inputValue.trim().length <= 1) return;
 
@@ -34,6 +36,6 @@ export const AddCategory = ({ onNewCategory }) => {
 }
 
 
-AddCategory.propTypes  = {
+AddCategory.propTypes = {
     onNewCategory: PropTypes.func.isRequired,
 }
