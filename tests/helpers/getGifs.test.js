@@ -11,7 +11,7 @@ describe('Pruebas de getGifs()', () => {
         expect(gifs[0]).toEqual({
             id: expect.any(String) ,
             title: expect.any(String) ,
-            URL: expect.any(String),
+            url: expect.any(String),
         })
         
     });
